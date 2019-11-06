@@ -17,6 +17,8 @@ namespace WindowsFormsAppFoodOrders
         {
             InitializeComponent();
             this.nameLabel.Text = "";
+            this.addressLabel.Text = "";
+            this.phoneLabel.Text = "";
             foodOrderArray = foodOrders;
             this.foodOrderListBox.DataSource = foodOrders;
             this.foodOrderListBox.DisplayMember = "orderNumber";
@@ -27,6 +29,8 @@ namespace WindowsFormsAppFoodOrders
             FoodOrder selectedFoodOrder = (FoodOrder)this.foodOrderListBox.SelectedItem;
             this.orderTracker1.UpdateOrderedFoodBlocks(selectedFoodOrder.foodBlockList);
             this.nameLabel.Text = selectedFoodOrder.customerDetails.customerName;
+            this.addressLabel.Text = selectedFoodOrder.customerDetails.customerAddress;
+            this.phoneLabel.Text = selectedFoodOrder.customerDetails.customerPhone;
         }
 
 
