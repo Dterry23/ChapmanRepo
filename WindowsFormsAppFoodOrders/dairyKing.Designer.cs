@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SundaeCostLabel = new System.Windows.Forms.Label();
             this.SundaeLabel = new System.Windows.Forms.Label();
             this.SundaeNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -78,7 +79,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.orderTracker1 = new WindowsFormsAppFoodOrders.OrderTracker();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -122,7 +122,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.orderTracker1);
             this.splitContainer1.Size = new System.Drawing.Size(617, 564);
-            this.splitContainer1.SplitterDistance = 415;
+            this.splitContainer1.SplitterDistance = 418;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -144,7 +144,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(415, 564);
+            this.splitContainer2.Size = new System.Drawing.Size(418, 564);
             this.splitContainer2.SplitterDistance = 112;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
@@ -226,7 +226,7 @@
             this.splitContainer3.Panel2.Controls.Add(this.label8);
             this.splitContainer3.Panel2.Controls.Add(this.label7);
             this.splitContainer3.Panel2.Controls.Add(this.label6);
-            this.splitContainer3.Size = new System.Drawing.Size(413, 449);
+            this.splitContainer3.Size = new System.Drawing.Size(416, 449);
             this.splitContainer3.SplitterDistance = 110;
             this.splitContainer3.SplitterWidth = 1;
             this.splitContainer3.TabIndex = 0;
@@ -287,6 +287,16 @@
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Customer Detail";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(255, 259);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Complete";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // SundaeCostLabel
             // 
@@ -609,18 +619,8 @@
             this.orderTracker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderTracker1.Location = new System.Drawing.Point(0, 0);
             this.orderTracker1.Name = "orderTracker1";
-            this.orderTracker1.Size = new System.Drawing.Size(199, 562);
+            this.orderTracker1.Size = new System.Drawing.Size(196, 562);
             this.orderTracker1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(255, 259);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 72;
-            this.button1.Text = "Complete";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // dairyKing
             // 
@@ -631,6 +631,7 @@
             this.Name = "dairyKing";
             this.Text = "cowFilA";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DairyKing_FormClosed);
+            this.Load += new System.EventHandler(this.DairyKing_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

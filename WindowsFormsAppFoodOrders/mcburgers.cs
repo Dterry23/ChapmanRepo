@@ -19,6 +19,7 @@ namespace WindowsFormsAppFoodOrders
 
         public mcburgers(LandingPage parentForm)
         {
+       
             InitializeComponent();
             theLandingPage = parentForm;
         }
@@ -132,7 +133,7 @@ namespace WindowsFormsAppFoodOrders
             foodOrder.foodBlockList = foodOrderList;
 
             this.Hide();
-            var formCompletionPage = new FormCompletionPage();
+            var formCompletionPage = new FormCompletionPage(theLandingPage);
             formCompletionPage.FoodOrder = foodOrder;
             formCompletionPage.Show();
         }

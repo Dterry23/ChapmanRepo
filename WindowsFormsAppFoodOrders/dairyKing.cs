@@ -128,9 +128,14 @@ namespace WindowsFormsAppFoodOrders
             foodOrder.foodBlockList = foodOrderList;
 
             this.Hide();
-            var formCompletionPage = new FormCompletionPage();
+            var formCompletionPage = new FormCompletionPage(theParentForm);
             formCompletionPage.FoodOrder = foodOrder;
             formCompletionPage.Show();
+        }
+
+        private void DairyKing_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,6 +37,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.McBurgerButton = new System.Windows.Forms.Button();
+            this.orderHistoryButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.orderHistoryButton);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox3);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox2);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
@@ -153,6 +155,15 @@
             this.McBurgerButton.UseVisualStyleBackColor = true;
             this.McBurgerButton.Click += new System.EventHandler(this.McBurgerButton_Click);
             // 
+            // orderHistoryButton
+            // 
+            this.orderHistoryButton.Location = new System.Drawing.Point(171, 368);
+            this.orderHistoryButton.Name = "orderHistoryButton";
+            this.orderHistoryButton.Size = new System.Drawing.Size(75, 23);
+            this.orderHistoryButton.TabIndex = 6;
+            this.orderHistoryButton.Text = "See History";
+            this.orderHistoryButton.UseVisualStyleBackColor = true;
+            // 
             // LandingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +174,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LandingPage";
             this.Text = "Landing Page";
+            this.Load += new System.EventHandler(this.LandingPage_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -185,6 +197,7 @@
         private System.Windows.Forms.Button McBurgerButton;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button orderHistoryButton;
     }
 }
 

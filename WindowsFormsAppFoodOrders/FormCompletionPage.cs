@@ -13,11 +13,23 @@ namespace WindowsFormsAppFoodOrders
     public partial class FormCompletionPage : Form
     {
         FoodOrder pfoodOrder;
-        public FoodOrder FoodOrder {
-            get {
+
+        LandingPage theParentForm;
+        public FormCompletionPage(LandingPage landingPage)
+        {
+            InitializeComponent();
+            theParentForm = landingPage;
+
+        }
+
+        public FoodOrder FoodOrder
+        {
+            get
+            {
                 return pfoodOrder;
             }
-            set {
+            set
+            {
                 pfoodOrder = value;
                 this.customerNameLabel.Text = FoodOrder.customerDetails.customerName;
                 this.customerAddressLabel.Text = FoodOrder.customerDetails.customerAddress;
@@ -26,14 +38,18 @@ namespace WindowsFormsAppFoodOrders
 
             }
         }
-        public FormCompletionPage()
-        {
-            InitializeComponent();
-        }
 
         private void CustomerPhoneNumberTextBox_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void RestartButton_Click(object sender, EventArgs e)
+        {
+            theParentForm.AddFoodOrder(pfoodOrder);
+            this.Hide();
+            theParentForm.Show();
+            
         }
     }
 }

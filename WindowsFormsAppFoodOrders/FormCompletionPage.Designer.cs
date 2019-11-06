@@ -37,6 +37,7 @@
             this.customerAddressLabel = new System.Windows.Forms.Label();
             this.customerPhoneNumberLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.restartButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // orderTracker1
@@ -121,11 +122,22 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Customer Details";
             // 
+            // restartButton
+            // 
+            this.restartButton.Location = new System.Drawing.Point(39, 379);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(75, 23);
+            this.restartButton.TabIndex = 14;
+            this.restartButton.Text = "Restart";
+            this.restartButton.UseVisualStyleBackColor = true;
+            this.restartButton.Click += new System.EventHandler(this.RestartButton_Click);
+            // 
             // FormCompletionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 437);
+            this.Controls.Add(this.restartButton);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.customerPhoneNumberLabel);
             this.Controls.Add(this.customerAddressLabel);
@@ -153,5 +165,6 @@
         private System.Windows.Forms.Label customerAddressLabel;
         private System.Windows.Forms.Label customerPhoneNumberLabel;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button restartButton;
     }
 }

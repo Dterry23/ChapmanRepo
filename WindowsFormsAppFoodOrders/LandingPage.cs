@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,33 @@ namespace WindowsFormsAppFoodOrders
 {
     public partial class LandingPage : Form
     {
+        FoodOrder[] FoodOrderArray = new FoodOrder[10];
+
+
         public LandingPage()
         {
             InitializeComponent();
         }
+
+        public void AddFoodOrder(FoodOrder foodOrder)
+        {
+            int index = 0;
+            while (FoodOrderArray[index] != null)
+            {
+                index++;
+            }
+            if(FoodOrderArray[index] == null)
+            {
+                FoodOrderArray[index] = foodOrder;
+            } else
+            {
+                Array.Resize(ref FoodOrderArray, FoodOrderArray.Length + 10);
+                index++;
+                FoodOrderArray[index] = foodOrder;
+            }
+            
+        }
+
 
         private void McBurgerButton_Click(object sender, EventArgs e)
         {
@@ -57,6 +81,11 @@ namespace WindowsFormsAppFoodOrders
             this.Hide();
             var dairyKing = new dairyKing(this);
             dairyKing.Show();
+        }
+
+        private void LandingPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
