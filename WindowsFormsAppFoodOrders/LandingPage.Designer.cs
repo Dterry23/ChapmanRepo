@@ -163,6 +163,7 @@
             this.orderHistoryButton.TabIndex = 6;
             this.orderHistoryButton.Text = "See History";
             this.orderHistoryButton.UseVisualStyleBackColor = true;
+            this.orderHistoryButton.Click += new System.EventHandler(this.OrderHistoryButton_Click);
             // 
             // LandingPage
             // 

@@ -9,6 +9,12 @@ namespace WindowsFormsAppFoodOrders
     public class FoodOrder
     {
         public CustomerDetails customerDetails { get; set; }
+
+        public override string ToString()
+        {
+            return this.orderNumber.ToString() + " - " + this.customerDetails.customerName;
+        }
+
         public int orderNumber { get; set; }
         public List<FoodBlock> foodBlockList { get; set; }
 

@@ -79,6 +79,12 @@
     <Compile Include="FormCompletionPage.Designer.cs">
       <DependentUpon>FormCompletionPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOrderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrderHistory.Designer.cs">
+      <DependentUpon>FormOrderHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCompletionPage.resx">
       <DependentUpon>FormCompletionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrderHistory.resx">
+      <DependentUpon>FormOrderHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.cs</DependentUpon>

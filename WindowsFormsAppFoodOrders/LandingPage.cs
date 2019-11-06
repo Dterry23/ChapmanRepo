@@ -87,5 +87,11 @@ namespace WindowsFormsAppFoodOrders
         {
 
         }
+
+        private void OrderHistoryButton_Click(object sender, EventArgs e)
+        {
+            FormOrderHistory formOrderHistory = new FormOrderHistory(FoodOrderArray);
+            formOrderHistory.Show();
+        }
     }
 }
