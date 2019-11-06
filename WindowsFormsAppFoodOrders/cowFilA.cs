@@ -14,6 +14,7 @@ namespace WindowsFormsAppFoodOrders
     public partial class cowFilA : Form
     {
         LandingPage pParentPage;
+        List<FoodBlock> foodOrderList;
         public cowFilA(LandingPage parentpage)
         {
             InitializeComponent();
@@ -27,21 +28,21 @@ namespace WindowsFormsAppFoodOrders
 
         private void CheckAllFoodItems()
         {
-            List<FoodBlock> FoodOrderList = new List<FoodBlock>();
-            CreateFoodBlock(this.SixOunceSteakLabel.Text, this.SixOunceSteakCostLabel.Text, (int)this.SixOunceSteakNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.EightOunceSteakLabel.Text, this.EightOunceSteakCostLabel.Text, (int)this.EightOunceSteakNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.TwelveOunceSteakLabel.Text, this.TwelveOunceSteakCostLabel.Text, (int)this.TwelveOunceSteakNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.RibsLabel.Text, this.RibsCostLabel.Text, (int)this.RibsNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.CaesarSaladLabel.Text, this.CaesarSaladCostLabel.Text, (int)this.CaesarSaladNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.GrilledBBQChickenLabel.Text, this.GrilledBBQChickenCostLabel.Text, (int)this.GrilledBBQChickenNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.GrilledSalmonLabel.Text, this.GrilledSalmonCostLabel.Text, (int)this.GrilledSalmonNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.FriesLabel.Text, this.FriesCostLabel.Text, (int)this.FriesNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.PotatoesLabel.Text, this.PotatoesCostLabel.Text, (int)this.PotatoesNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.BroccoliLabel.Text, this.BroccoliCostLabel.Text, (int)this.BroccoliNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.FriedPicklesLabel.Text, this.FriedPicklesCostLabel.Text, (int)this.FriedPicklesNumericUpDown.Value, FoodOrderList);
+            foodOrderList = new List<FoodBlock>();
+            CreateFoodBlock(this.SixOunceSteakLabel.Text, this.SixOunceSteakCostLabel.Text, (int)this.SixOunceSteakNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.EightOunceSteakLabel.Text, this.EightOunceSteakCostLabel.Text, (int)this.EightOunceSteakNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.TwelveOunceSteakLabel.Text, this.TwelveOunceSteakCostLabel.Text, (int)this.TwelveOunceSteakNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.RibsLabel.Text, this.RibsCostLabel.Text, (int)this.RibsNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.CaesarSaladLabel.Text, this.CaesarSaladCostLabel.Text, (int)this.CaesarSaladNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.GrilledBBQChickenLabel.Text, this.GrilledBBQChickenCostLabel.Text, (int)this.GrilledBBQChickenNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.GrilledSalmonLabel.Text, this.GrilledSalmonCostLabel.Text, (int)this.GrilledSalmonNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.FriesLabel.Text, this.FriesCostLabel.Text, (int)this.FriesNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.PotatoesLabel.Text, this.PotatoesCostLabel.Text, (int)this.PotatoesNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.BroccoliLabel.Text, this.BroccoliCostLabel.Text, (int)this.BroccoliNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.FriedPicklesLabel.Text, this.FriedPicklesCostLabel.Text, (int)this.FriedPicklesNumericUpDown.Value, foodOrderList);
 
 
-            this.orderTracker1.UpdateOrderedFoodBlocks(FoodOrderList);
+            this.orderTracker1.UpdateOrderedFoodBlocks(foodOrderList);
 
         }
         private void CreateFoodBlock(string name, string cost, int quantity, List<FoodBlock> FoodOrderList)
@@ -109,6 +110,27 @@ namespace WindowsFormsAppFoodOrders
         private void FriedPicklesNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             CheckAllFoodItems();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            FoodOrder foodOrder = new FoodOrder();
+            Random randomNumberGenerator = new Random();
+            CustomerDetails customerDetails = new CustomerDetails();
+
+            customerDetails.customerName = this.customerNameTextBox.Text;
+            customerDetails.customerAddress = this.customerAddressTextBox.Text;
+            customerDetails.customerPhone = this.customerPhoneNumberTextBox.Text;
+
+            foodOrder.customerDetails = customerDetails;
+            foodOrder.orderNumber = randomNumberGenerator.Next(1, 100);
+
+            foodOrder.foodBlockList = foodOrderList;
+
+            this.Hide();
+            var formCompletionPage = new FormCompletionPage();
+            formCompletionPage.FoodOrder = foodOrder;
+            formCompletionPage.Show();
         }
     }
 }

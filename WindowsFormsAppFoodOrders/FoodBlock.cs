@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsAppFoodOrders
 {
-    class FoodBlock
+   public class FoodBlock
     {
-        public string name;
-        public decimal cost;
-        public int quantity;
+        public string name { get; set; }
+        public decimal cost { get; set; }
+        public int quantity { get; set; }
         public decimal calculateFoodBlockcost()
         {
             return cost * quantity;

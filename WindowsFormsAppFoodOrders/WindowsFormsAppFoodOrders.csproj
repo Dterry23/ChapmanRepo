@@ -64,6 +64,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerDetails.cs" />
+    <Compile Include="FoodOrder.cs" />
     <Compile Include="dairyKing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +73,12 @@
       <DependentUpon>dairyKing.cs</DependentUpon>
     </Compile>
     <Compile Include="FoodBlock.cs" />
+    <Compile Include="FormCompletionPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCompletionPage.Designer.cs">
+      <DependentUpon>FormCompletionPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,12 +97,6 @@
     <Compile Include="mcburgers.Designer.cs">
       <DependentUpon>mcburgers.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderCompletionPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrderCompletionPage.Designer.cs">
-      <DependentUpon>OrderCompletionPage.cs</DependentUpon>
-    </Compile>
     <Compile Include="OrderTracker.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +108,9 @@
     <EmbeddedResource Include="dairyKing.resx">
       <DependentUpon>dairyKing.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCompletionPage.resx">
+      <DependentUpon>FormCompletionPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mcburgers.resx">
       <DependentUpon>mcburgers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrderCompletionPage.resx">
-      <DependentUpon>OrderCompletionPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderTracker.resx">
       <DependentUpon>OrderTracker.cs</DependentUpon>

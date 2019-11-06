@@ -34,9 +34,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.customerPhoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.customerAddressTextBox = new System.Windows.Forms.TextBox();
+            this.customerNameTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,6 +78,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.orderTracker1 = new WindowsFormsAppFoodOrders.OrderTracker();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -102,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TwelveOunceSteakNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EightOunceSteakNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SixOunceSteakNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -121,7 +124,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.orderTracker1);
             this.splitContainer1.Size = new System.Drawing.Size(604, 631);
-            this.splitContainer1.SplitterDistance = 416;
+            this.splitContainer1.SplitterDistance = 422;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -143,7 +146,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(416, 631);
+            this.splitContainer2.Size = new System.Drawing.Size(422, 631);
             this.splitContainer2.SplitterDistance = 112;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
@@ -178,9 +181,9 @@
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.textBox3);
-            this.splitContainer3.Panel1.Controls.Add(this.textBox2);
-            this.splitContainer3.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer3.Panel1.Controls.Add(this.customerPhoneNumberTextBox);
+            this.splitContainer3.Panel1.Controls.Add(this.customerAddressTextBox);
+            this.splitContainer3.Panel1.Controls.Add(this.customerNameTextBox);
             this.splitContainer3.Panel1.Controls.Add(this.label5);
             this.splitContainer3.Panel1.Controls.Add(this.label4);
             this.splitContainer3.Panel1.Controls.Add(this.label3);
@@ -188,6 +191,7 @@
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.Controls.Add(this.button1);
             this.splitContainer3.Panel2.Controls.Add(this.FriedPicklesCostLabel);
             this.splitContainer3.Panel2.Controls.Add(this.FriedPicklesLabel);
             this.splitContainer3.Panel2.Controls.Add(this.FriedPicklesNumericUpDown);
@@ -224,31 +228,31 @@
             this.splitContainer3.Panel2.Controls.Add(this.label8);
             this.splitContainer3.Panel2.Controls.Add(this.label7);
             this.splitContainer3.Panel2.Controls.Add(this.label6);
-            this.splitContainer3.Size = new System.Drawing.Size(414, 516);
+            this.splitContainer3.Size = new System.Drawing.Size(420, 516);
             this.splitContainer3.SplitterDistance = 119;
             this.splitContainer3.SplitterWidth = 1;
             this.splitContainer3.TabIndex = 0;
             // 
-            // textBox3
+            // customerPhoneNumberTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(83, 76);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 20);
-            this.textBox3.TabIndex = 6;
+            this.customerPhoneNumberTextBox.Location = new System.Drawing.Point(83, 76);
+            this.customerPhoneNumberTextBox.Name = "customerPhoneNumberTextBox";
+            this.customerPhoneNumberTextBox.Size = new System.Drawing.Size(186, 20);
+            this.customerPhoneNumberTextBox.TabIndex = 6;
             // 
-            // textBox2
+            // customerAddressTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(83, 59);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 20);
-            this.textBox2.TabIndex = 5;
+            this.customerAddressTextBox.Location = new System.Drawing.Point(83, 59);
+            this.customerAddressTextBox.Name = "customerAddressTextBox";
+            this.customerAddressTextBox.Size = new System.Drawing.Size(186, 20);
+            this.customerAddressTextBox.TabIndex = 5;
             // 
-            // textBox1
+            // customerNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 20);
-            this.textBox1.TabIndex = 4;
+            this.customerNameTextBox.Location = new System.Drawing.Point(83, 42);
+            this.customerNameTextBox.Name = "customerNameTextBox";
+            this.customerNameTextBox.Size = new System.Drawing.Size(186, 20);
+            this.customerNameTextBox.TabIndex = 4;
             // 
             // label5
             // 
@@ -607,8 +611,23 @@
             this.orderTracker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderTracker1.Location = new System.Drawing.Point(0, 0);
             this.orderTracker1.Name = "orderTracker1";
-            this.orderTracker1.Size = new System.Drawing.Size(185, 629);
+            this.orderTracker1.Size = new System.Drawing.Size(179, 629);
             this.orderTracker1.TabIndex = 0;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(246, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Complete";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // cowFilA
             // 
@@ -646,6 +665,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TwelveOunceSteakNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EightOunceSteakNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SixOunceSteakNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -657,9 +677,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox customerPhoneNumberTextBox;
+        private System.Windows.Forms.TextBox customerAddressTextBox;
+        private System.Windows.Forms.TextBox customerNameTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -701,5 +721,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private OrderTracker orderTracker1;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Button button1;
     }
 }

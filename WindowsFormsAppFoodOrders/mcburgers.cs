@@ -15,7 +15,8 @@ namespace WindowsFormsAppFoodOrders
     {
         
         LandingPage theLandingPage;
-   
+        List<FoodBlock> foodOrderList;
+
         public mcburgers(LandingPage parentForm)
         {
             InitializeComponent();
@@ -34,22 +35,22 @@ namespace WindowsFormsAppFoodOrders
 
         private void CheckAllFoodItems()
         {
-            List<FoodBlock> FoodOrderList = new List<FoodBlock>();
-            CreateFoodBlock(this.BurgerLabel.Text, this.BurgerCostLabel.Text, (int)this.BurgerNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.ChickenSandwhichLabel.Text, this.ChickenSandwhichCostLabel.Text, (int)this.ChickenSandwhichNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.SaladLabel.Text, this.BurgerCostLabel.Text, (int)this.SaladNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.LargeDrinkLabel.Text, this.LargeDrinkCostLabel.Text, (int)this.LargeDrinkNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.MediumDrinkLabel.Text, this.MediumDrinkCostLabel.Text, (int)this.MediumDrinkNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.SmallDrinkLabel.Text, this.SmallDrinkCostLabel.Text, (int)this.SmallDrinkNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.WrapLabel.Text, this.WrapCostLabel.Text, (int)this.WrapNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.FriesLabel.Text, this.FriesCostLabel.Text, (int)this.FriesNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.SundaeLabel.Text, this.SundaeCostLabel.Text, (int)this.SundaeNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.CookieLabel.Text, this.CookieCostLabel.Text, (int)this.CookieNumericUpDown.Value, FoodOrderList);
-            CreateFoodBlock(this.OnionRingsLabel.Text, this.OnionRingsCostLabel.Text, (int)this.OnionRingsNumericUpDown.Value, FoodOrderList);
+            foodOrderList = new List<FoodBlock>();
+            CreateFoodBlock(this.BurgerLabel.Text, this.BurgerCostLabel.Text, (int)this.BurgerNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.ChickenSandwhichLabel.Text, this.ChickenSandwhichCostLabel.Text, (int)this.ChickenSandwhichNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.SaladLabel.Text, this.BurgerCostLabel.Text, (int)this.SaladNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.LargeDrinkLabel.Text, this.LargeDrinkCostLabel.Text, (int)this.LargeDrinkNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.MediumDrinkLabel.Text, this.MediumDrinkCostLabel.Text, (int)this.MediumDrinkNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.SmallDrinkLabel.Text, this.SmallDrinkCostLabel.Text, (int)this.SmallDrinkNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.WrapLabel.Text, this.WrapCostLabel.Text, (int)this.WrapNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.FriesLabel.Text, this.FriesCostLabel.Text, (int)this.FriesNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.SundaeLabel.Text, this.SundaeCostLabel.Text, (int)this.SundaeNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.CookieLabel.Text, this.CookieCostLabel.Text, (int)this.CookieNumericUpDown.Value, foodOrderList);
+            CreateFoodBlock(this.OnionRingsLabel.Text, this.OnionRingsCostLabel.Text, (int)this.OnionRingsNumericUpDown.Value, foodOrderList);
 
 
 
-            this.orderTracker1.UpdateOrderedFoodBlocks(FoodOrderList);
+            this.orderTracker1.UpdateOrderedFoodBlocks(foodOrderList);
         }
 
 
@@ -113,6 +114,27 @@ namespace WindowsFormsAppFoodOrders
         private void OnionRingsNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             CheckAllFoodItems();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            FoodOrder foodOrder = new FoodOrder();
+            Random randomNumberGenerator = new Random();
+            CustomerDetails customerDetails = new CustomerDetails();
+
+            customerDetails.customerName = this.customerNameTextBox.Text;
+            customerDetails.customerAddress = this.customerAddressTextBox.Text;
+            customerDetails.customerPhone = this.customerPhoneNumberTextBox.Text;
+
+            foodOrder.customerDetails = customerDetails;
+            foodOrder.orderNumber = randomNumberGenerator.Next(1, 100);
+
+            foodOrder.foodBlockList = foodOrderList;
+
+            this.Hide();
+            var formCompletionPage = new FormCompletionPage();
+            formCompletionPage.FoodOrder = foodOrder;
+            formCompletionPage.Show();
         }
     }
 }
