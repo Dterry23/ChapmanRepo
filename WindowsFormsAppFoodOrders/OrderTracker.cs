@@ -81,5 +81,9 @@ namespace WindowsFormsAppFoodOrders
 
         }
 
+        private void SplitContainer2_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

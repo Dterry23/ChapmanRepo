@@ -84,12 +84,16 @@
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.SplitContainer2_Panel1_Paint);
+            // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.GrandTotalFoodCost);
             this.splitContainer2.Panel2.Controls.Add(this.label2);
             this.splitContainer2.Size = new System.Drawing.Size(200, 357);
-            this.splitContainer2.SplitterDistance = 308;
+            this.splitContainer2.SplitterDistance = 311;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
             // 

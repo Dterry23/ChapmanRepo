@@ -123,6 +123,7 @@
             this.Controls.Add(this.foodOrderListBox);
             this.Name = "FormOrderHistory";
             this.Text = "FormOrderHistory";
+            this.Load += new System.EventHandler(this.FormOrderHistory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

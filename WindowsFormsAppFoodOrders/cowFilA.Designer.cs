@@ -32,7 +32,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.cowFilALabel = new System.Windows.Forms.Label();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.customerPhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.customerAddressTextBox = new System.Windows.Forms.TextBox();
@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.FriedPicklesCostLabel = new System.Windows.Forms.Label();
             this.FriedPicklesLabel = new System.Windows.Forms.Label();
             this.FriedPicklesNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -77,9 +78,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.orderTracker1 = new WindowsFormsAppFoodOrders.OrderTracker();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.button1 = new System.Windows.Forms.Button();
+            this.orderTracker1 = new WindowsFormsAppFoodOrders.OrderTracker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -124,7 +124,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.orderTracker1);
             this.splitContainer1.Size = new System.Drawing.Size(604, 631);
-            this.splitContainer1.SplitterDistance = 422;
+            this.splitContainer1.SplitterDistance = 425;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -141,12 +141,12 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.pictureBox1);
-            this.splitContainer2.Panel1.Controls.Add(this.label1);
+            this.splitContainer2.Panel1.Controls.Add(this.cowFilALabel);
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(422, 631);
+            this.splitContainer2.Size = new System.Drawing.Size(425, 631);
             this.splitContainer2.SplitterDistance = 112;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
@@ -161,15 +161,15 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // cowFilALabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cow-Fil-A";
+            this.cowFilALabel.AutoSize = true;
+            this.cowFilALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cowFilALabel.Location = new System.Drawing.Point(172, 8);
+            this.cowFilALabel.Name = "cowFilALabel";
+            this.cowFilALabel.Size = new System.Drawing.Size(93, 24);
+            this.cowFilALabel.TabIndex = 0;
+            this.cowFilALabel.Text = "Cow-Fil-A";
             // 
             // splitContainer3
             // 
@@ -228,7 +228,7 @@
             this.splitContainer3.Panel2.Controls.Add(this.label8);
             this.splitContainer3.Panel2.Controls.Add(this.label7);
             this.splitContainer3.Panel2.Controls.Add(this.label6);
-            this.splitContainer3.Size = new System.Drawing.Size(420, 516);
+            this.splitContainer3.Size = new System.Drawing.Size(423, 516);
             this.splitContainer3.SplitterDistance = 119;
             this.splitContainer3.SplitterWidth = 1;
             this.splitContainer3.TabIndex = 0;
@@ -289,6 +289,16 @@
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Customer Detail";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(246, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Complete";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // FriedPicklesCostLabel
             // 
@@ -606,28 +616,18 @@
             this.label6.TabIndex = 36;
             this.label6.Text = "Menu";
             // 
-            // orderTracker1
-            // 
-            this.orderTracker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderTracker1.Location = new System.Drawing.Point(0, 0);
-            this.orderTracker1.Name = "orderTracker1";
-            this.orderTracker1.Size = new System.Drawing.Size(179, 629);
-            this.orderTracker1.TabIndex = 0;
-            // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // button1
+            // orderTracker1
             // 
-            this.button1.Location = new System.Drawing.Point(246, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 72;
-            this.button1.Text = "Complete";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.orderTracker1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderTracker1.Location = new System.Drawing.Point(0, 0);
+            this.orderTracker1.Name = "orderTracker1";
+            this.orderTracker1.Size = new System.Drawing.Size(176, 629);
+            this.orderTracker1.TabIndex = 0;
             // 
             // cowFilA
             // 
@@ -675,7 +675,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label cowFilALabel;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.TextBox customerPhoneNumberTextBox;
         private System.Windows.Forms.TextBox customerAddressTextBox;

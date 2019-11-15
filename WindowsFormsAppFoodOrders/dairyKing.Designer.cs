@@ -32,7 +32,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dairyKingLabel = new System.Windows.Forms.Label();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.customerPhoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.customerAddressTextBox = new System.Windows.Forms.TextBox();
@@ -122,7 +122,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.orderTracker1);
             this.splitContainer1.Size = new System.Drawing.Size(617, 564);
-            this.splitContainer1.SplitterDistance = 418;
+            this.splitContainer1.SplitterDistance = 421;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -139,12 +139,12 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.pictureBox1);
-            this.splitContainer2.Panel1.Controls.Add(this.label1);
+            this.splitContainer2.Panel1.Controls.Add(this.dairyKingLabel);
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(418, 564);
+            this.splitContainer2.Size = new System.Drawing.Size(421, 564);
             this.splitContainer2.SplitterDistance = 112;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
@@ -159,15 +159,15 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // dairyKingLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Dairy King";
+            this.dairyKingLabel.AutoSize = true;
+            this.dairyKingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dairyKingLabel.Location = new System.Drawing.Point(171, 9);
+            this.dairyKingLabel.Name = "dairyKingLabel";
+            this.dairyKingLabel.Size = new System.Drawing.Size(95, 24);
+            this.dairyKingLabel.TabIndex = 0;
+            this.dairyKingLabel.Text = "Dairy King";
             // 
             // splitContainer3
             // 
@@ -226,7 +226,7 @@
             this.splitContainer3.Panel2.Controls.Add(this.label8);
             this.splitContainer3.Panel2.Controls.Add(this.label7);
             this.splitContainer3.Panel2.Controls.Add(this.label6);
-            this.splitContainer3.Size = new System.Drawing.Size(416, 449);
+            this.splitContainer3.Size = new System.Drawing.Size(419, 449);
             this.splitContainer3.SplitterDistance = 110;
             this.splitContainer3.SplitterWidth = 1;
             this.splitContainer3.TabIndex = 0;
@@ -619,7 +619,7 @@
             this.orderTracker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderTracker1.Location = new System.Drawing.Point(0, 0);
             this.orderTracker1.Name = "orderTracker1";
-            this.orderTracker1.Size = new System.Drawing.Size(196, 562);
+            this.orderTracker1.Size = new System.Drawing.Size(193, 562);
             this.orderTracker1.TabIndex = 0;
             // 
             // dairyKing
@@ -668,7 +668,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label dairyKingLabel;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.TextBox customerPhoneNumberTextBox;
         private System.Windows.Forms.TextBox customerAddressTextBox;

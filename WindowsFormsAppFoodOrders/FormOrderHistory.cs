@@ -31,8 +31,13 @@ namespace WindowsFormsAppFoodOrders
             this.nameLabel.Text = selectedFoodOrder.customerDetails.customerName;
             this.addressLabel.Text = selectedFoodOrder.customerDetails.customerAddress;
             this.phoneLabel.Text = selectedFoodOrder.customerDetails.customerPhone;
+            
+
+         }
+
+        private void FormOrderHistory_Load(object sender, EventArgs e)
+        {
+
         }
-
-
     }
 }

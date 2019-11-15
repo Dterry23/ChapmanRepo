@@ -121,6 +121,8 @@ namespace WindowsFormsAppFoodOrders
             customerDetails.customerName = this.customerNameTextBox.Text;
             customerDetails.customerAddress = this.customerAddressTextBox.Text;
             customerDetails.customerPhone = this.customerPhoneNumberTextBox.Text;
+            customerDetails.restaurantName = this.dairyKingLabel.Text;
+
 
             foodOrder.customerDetails = customerDetails;
             foodOrder.orderNumber = randomNumberGenerator.Next(1, 100);

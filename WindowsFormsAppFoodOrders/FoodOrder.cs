@@ -12,7 +12,7 @@ namespace WindowsFormsAppFoodOrders
 
         public override string ToString()
         {
-            return this.orderNumber.ToString() + " - " + this.customerDetails.customerName;
+            return this.orderNumber.ToString() + " - " + this.customerDetails.restaurantName + " Order....." ;
         }
 
         public int orderNumber { get; set; }

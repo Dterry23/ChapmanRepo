@@ -122,10 +122,12 @@ namespace WindowsFormsAppFoodOrders
             FoodOrder foodOrder = new FoodOrder();
             Random randomNumberGenerator = new Random();
             CustomerDetails customerDetails = new CustomerDetails();
+            
 
             customerDetails.customerName = this.customerNameTextBox.Text;
             customerDetails.customerAddress = this.customerAddressTextBox.Text;
             customerDetails.customerPhone = this.customerPhoneNumberTextBox.Text;
+            customerDetails.restaurantName = this.mcBurgersLabel.Text;
 
             foodOrder.customerDetails = customerDetails;
             foodOrder.orderNumber = randomNumberGenerator.Next(1, 100);
