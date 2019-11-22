@@ -8,7 +8,12 @@ namespace WindowsFormsApplicationMyCircles
 {
     class Circle
     {
-        public static Int32 CircleCount = 1;
-        public static List<String> GList = new List<String>();
+        public static double pi = 3.14;
+        public int radius;
+
+        public double getArea()
+        {
+            return pi * radius * radius;
+        }
     }
 }
