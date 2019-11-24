@@ -8,14 +8,15 @@ namespace WindowsFormsApplicationMyCircles
 {
     class Triangle
     {
-        public int height;
+        public float height;
 
-        public int getArea()
+        public float getArea()
         {
             return (height * height) / 2;
+            
         }
 
-        public int getPerim()
+        public float getPerim()
         {
             return height * 3;
         }

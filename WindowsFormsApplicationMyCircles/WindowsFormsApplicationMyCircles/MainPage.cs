@@ -57,7 +57,7 @@ namespace WindowsFormsApplicationMyCircles
             mySquare.height = ClassGlobals.CircleCount++;
             myNum = mySquare.getArea();
 
-            myStr = string.Format("Square Side Length {0,-5} Square Area {1,-10:D2} Perimeter {2,-10:D2}",
+            myStr = string.Format("All Sides {0,-5} Square Area {1,-10:D2} Perimeter {2,-10:D2}",
                 Convert.ToString(mySquare.height),
                 Convert.ToString(mySquare.getArea()),
                 Convert.ToString(mySquare.getPerim()));
@@ -74,12 +74,12 @@ namespace WindowsFormsApplicationMyCircles
         private void TriangleButton_Click(object sender, EventArgs e)
         {
             string myStr = "";
-            int myNum;
+            float myNum;
             Triangle myTriangle = new Triangle();
             myTriangle.height = ClassGlobals.CircleCount++;
             myNum = myTriangle.getArea();
 
-            myStr = string.Format("Triangle Side Length {0,-5} Triangle Area {1,-10:D2} Perimeter {2,-10:D2}",
+            myStr = string.Format("All Sides {0,-5} Triangle Area {1,-10:D2} Perimeter {2,-10:D2}",
                 Convert.ToString(myTriangle.height),
                 Convert.ToString(myTriangle.getArea()),
                 Convert.ToString(myTriangle.getPerim()));
