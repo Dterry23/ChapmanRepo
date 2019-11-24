@@ -30,13 +30,15 @@
         {
             this.circleButton = new System.Windows.Forms.Button();
             this.circleDetailsTextBox = new System.Windows.Forms.TextBox();
+            this.squareButton = new System.Windows.Forms.Button();
+            this.triangleButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // circleButton
             // 
-            this.circleButton.Location = new System.Drawing.Point(214, 189);
+            this.circleButton.Location = new System.Drawing.Point(66, 191);
             this.circleButton.Name = "circleButton";
-            this.circleButton.Size = new System.Drawing.Size(75, 23);
+            this.circleButton.Size = new System.Drawing.Size(83, 23);
             this.circleButton.TabIndex = 0;
             this.circleButton.Text = "Get Circles";
             this.circleButton.UseVisualStyleBackColor = true;
@@ -44,17 +46,39 @@
             // 
             // circleDetailsTextBox
             // 
-            this.circleDetailsTextBox.Location = new System.Drawing.Point(69, 265);
+            this.circleDetailsTextBox.Location = new System.Drawing.Point(43, 261);
             this.circleDetailsTextBox.Multiline = true;
             this.circleDetailsTextBox.Name = "circleDetailsTextBox";
             this.circleDetailsTextBox.Size = new System.Drawing.Size(419, 145);
             this.circleDetailsTextBox.TabIndex = 1;
+            // 
+            // squareButton
+            // 
+            this.squareButton.Location = new System.Drawing.Point(211, 191);
+            this.squareButton.Name = "squareButton";
+            this.squareButton.Size = new System.Drawing.Size(86, 23);
+            this.squareButton.TabIndex = 2;
+            this.squareButton.Text = "Get Squares";
+            this.squareButton.UseVisualStyleBackColor = true;
+            this.squareButton.Click += new System.EventHandler(this.SquareButton_Click);
+            // 
+            // triangleButton
+            // 
+            this.triangleButton.Location = new System.Drawing.Point(355, 191);
+            this.triangleButton.Name = "triangleButton";
+            this.triangleButton.Size = new System.Drawing.Size(84, 23);
+            this.triangleButton.TabIndex = 3;
+            this.triangleButton.Text = "Get Triangles";
+            this.triangleButton.UseVisualStyleBackColor = true;
+            this.triangleButton.Click += new System.EventHandler(this.TriangleButton_Click);
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 505);
+            this.Controls.Add(this.triangleButton);
+            this.Controls.Add(this.squareButton);
             this.Controls.Add(this.circleDetailsTextBox);
             this.Controls.Add(this.circleButton);
             this.Name = "MainPage";
@@ -68,6 +92,8 @@
 
         private System.Windows.Forms.Button circleButton;
         private System.Windows.Forms.TextBox circleDetailsTextBox;
+        private System.Windows.Forms.Button squareButton;
+        private System.Windows.Forms.Button triangleButton;
     }
 }
 

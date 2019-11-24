@@ -15,5 +15,15 @@ namespace WindowsFormsApplicationMyCircles
         {
             return pi * radius * radius;
         }
+
+        public double getCircum()
+        {
+            return 2 * pi * radius;
+        }
+
+        public double getDiam()
+        {
+            return 2 * radius;
+        }
     }
 }
